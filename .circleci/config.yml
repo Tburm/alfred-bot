@@ -1,0 +1,20 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@4.1
+
+jobs:
+  deploy:
+    docker:
+      - image: cimg/node:15.1
+
+    steps:
+      - checkout
+      - node/install-packages
+      - run:
+          command: echo "test"
+
+workflows:
+  deploy-to-gcp: 
+    jobs:
+      - deploy
