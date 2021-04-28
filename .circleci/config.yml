@@ -11,7 +11,7 @@ jobs:
       - checkout
       - run:
           name: Copy across app.yaml config
-          command: ./app.yaml.sh > ./app.yaml
+          command: sh ./app.yaml.sh > ./app.yaml
       - run:
           name: Set up gcloud config
           command: |
