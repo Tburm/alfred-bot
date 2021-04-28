@@ -25,4 +25,8 @@ jobs:
 workflows:
   deploy-to-gcp:
     jobs:
-      - deploy
+      - deploy:
+          filters:
+            branches:
+              only:
+                - main
