@@ -1,0 +1,28 @@
+version: 2.1
+
+jobs:
+  deploy:
+    docker:
+      - image: google/cloud-sdk
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+      - run:
+          name: Copy across app.yaml config
+          command: sh ./app.yaml.sh > ./app.yaml
+      - run:
+          name: Set up gcloud config
+          command: |
+            echo $GCLOUD_KEY | gcloud auth activate-service-account --key-file=-
+            gcloud --quiet config set project ${GCLOUD_PROJECT}
+            gcloud --quiet config set compute/zone ${GCLOUD_ZONE}
+      - deploy:
+          name: Deploying to App Engine
+          command: gcloud app deploy app.yaml
+
+workflows:
+  deploy-to-gcp:
+    jobs:
+      - deploy
