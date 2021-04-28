@@ -1,0 +1,23 @@
+{
+  "name": "AlfredBot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
+    "twit": "^2.2.11"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tburm/alfred-bot.git"
+  }
+}
