@@ -15,5 +15,9 @@
     "discord.js": "^12.5.1",
     "dotenv": "^8.2.0",
     "twit": "^2.2.11"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tburm/alfred-bot.git"
   }
 }
