@@ -21,5 +21,5 @@ client.login(process.env.BOT_TOKEN);
 
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.end('Hello World\n');
-}).listen(8000, 'localhost');
+  res.end('We are LIVE');
+}).listen(process.env.PORT, 'localhost');
