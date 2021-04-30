@@ -2,20 +2,17 @@ const Discord = require('discord.js');
 var http = require('http');
 require('dotenv').config();
 
+// create the client and set a prefix
 const client = new Discord.Client({
   partials: ['MESSAGE', 'REACTION', 'CHANNEL'],
 });
 
-client.on('ready', () => {
-    console.log('The Bot is ready!')
-});
+client.commands = new Discord.Collection();
+client.events = new Discord.Collection();
 
-// A simple response
-client.on('message', (msg) => {
-  if (msg.content === 'Alfred?') {
-    msg.channel.send('Yes?');
-  }
-});
+['command_handler', 'event_handler'].forEach(handler => {
+  require(`./src/handlers/${handler}`)(client, Discord);
+})
 
 client.login(process.env.BOT_TOKEN);
 
