@@ -1,0 +1,4 @@
+cron:
+- description: "defibrillator"
+  url: /
+  schedule: every 5 minutes

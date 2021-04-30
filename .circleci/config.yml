@@ -20,7 +20,9 @@ jobs:
             gcloud --quiet config set compute/zone ${GCLOUD_ZONE}
       - deploy:
           name: Deploying to App Engine
-          command: gcloud app deploy app.yaml
+          command: |
+            gcloud app deploy app.yaml
+            gcloud app deploy cron.yaml
 
 workflows:
   deploy-to-gcp:
