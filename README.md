@@ -1,9 +1,8 @@
-# Alfred
+# Frontend
 
-A Discord bot written using `Discord.js`
+This is the frontend application for [troyb.dev](https://troyb.dev)
 
 # Usage
 
 * Install dependencies by running `npm install` from the root directory
-* Add a `.env` file to the root directory containing a single variable named `BOT_TOKEN`, with a corresponding token from Discord
 * Run `npm start`
