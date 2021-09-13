@@ -9,4 +9,7 @@ automatic_scaling:
 env_variables:
   GCLOUD_PROJECT: \"$GCLOUD_PROJECT\"
   BOT_TOKEN: \"$BOT_TOKEN\"
+dispatch:
+  - url: troyb.dev/*
+    service: default
 """
