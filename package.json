@@ -1,5 +1,5 @@
 {
-  "name": "AlfredBot",
+  "name": "frontend",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -19,6 +19,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/tburm/alfred-bot.git"
+    "url": "git://github.com/tburm/frontend.git"
   }
 }
