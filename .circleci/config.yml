@@ -22,7 +22,9 @@ jobs:
           name: Deploying to App Engine
           command: |
             gcloud app deploy app.yaml
+            gcloud app deploy dispatch.yaml
             gcloud app deploy cron.yaml
+
 
 workflows:
   deploy-to-gcp:
