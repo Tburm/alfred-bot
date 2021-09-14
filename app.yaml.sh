@@ -1,6 +1,6 @@
 #!/bin/bash
 echo """
-service: homepage
+service: home
 runtime: nodejs14
 instance_class: F1
 automatic_scaling:
